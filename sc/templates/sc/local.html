@@ -1,0 +1,42 @@
+{% extends "./base.html" %}{% load static %}
+{% block sb_admin_title %}{% endblock sb_admin_title %}
+{% block sb_admin_breadcrumb_active %}<li class="breadcrumb-item active">
+      Staffs List page
+ </li>{% endblock sb_admin_breadcrumb_active %}
+
+ {% block sb_admin_sidebar %}
+ <li class="nav-item">
+   <a class="nav-link" href="">
+     <i class="fas fa-fw fa-tachometer-alt"></i>
+     <span>Staffs</span>
+   </a>
+ </li>
+ <li class="nav-item dropdown">
+   <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+     <i class="fas fa-fw fa-folder"></i>
+     <span>Pages</span>
+   </a>
+   <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+     <h6 class="dropdown-header">Login Screens:</h6>
+     <a class="dropdown-item" href="{% url "sb_admin_login" %}">Login</a>
+     <a class="dropdown-item" href="{% url "sb_admin_register" %}">Register</a>
+     <a class="dropdown-item" href="{% url "sb_admin_forgot_password" %}">Forgot Password</a>
+     <div class="dropdown-divider"></div>
+     <h6 class="dropdown-header">Other Pages:</h6>
+     <a class="dropdown-item" href="{% url "sb_admin_404" %}">404 Page</a>
+     <a class="dropdown-item" href="{% url "sb_admin_blank" %}">Blank Page</a>
+   </div>
+ </li>
+ <li class="nav-item">
+   <a class="nav-link" href="{% url "sb_admin_charts" %}">
+     <i class="fas fa-fw fa-chart-area"></i>
+     <span>Charts</span></a>
+ </li>
+ <li class="nav-item active">
+    <a class="nav-link" href="{% url "sc:index" %}">
+      <i class="fas fa-fw fa-table"></i>
+      <span>Events</span></a>
+  </li>
+ {% endblock sb_admin_sidebar %}
+
+{% block sb_admin_content %}{% endblock sb_admin_content %}
