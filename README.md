@@ -1,6 +1,6 @@
 # Calendar
 
-Django + bootstrap_sb_admin2 + fullcalendar
+Django + bootstrap_sb_admin + fullcalendar
 The purpose of this app is to add calendar functionality to a basic admin app.
 I have incorporated a fullcalendar into Django using the sb_admin2 template.
 You can add, delete, and modify events in the calendar.
